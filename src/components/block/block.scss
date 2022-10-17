@@ -1,0 +1,91 @@
+@import '../../styles/utils';
+
+@mixin border {
+  background: transparent;
+  border: 0.9px solid rgba($color: #fff, $alpha: 0.4);
+  border-radius: 1.5rem;
+}
+
+.crypto__block {
+  display: flex;
+  flex-direction: column;
+  @include border;
+
+  &-reverse-row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    @include border;
+
+    & .crypto__block-content {
+      gap: 2.3rem;
+    }
+
+    @include onMobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-reverse-col {
+    padding-top: 12rem;
+    @include border;
+
+    & img {
+      width: 50%;
+      margin-left: 1.7rem;
+      margin-bottom: 5rem;
+      transform: rotate(-2.55deg);
+    }
+
+    @include onMobile {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 1.5rem;
+    }
+  }
+
+  &-img{
+    & img {
+      border-radius: 1.5rem;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    padding: 1.875rem;
+
+    &-title {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $color-subtext;
+    }
+
+    &-text {
+      font-size: 40px;
+      line-height: 120%;
+      letter-spacing: 0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+
+    &-link {
+      font-size: 15px;
+      line-height: 18px;
+      color: $color-subtext;
+      background: transparent;
+      max-width: max-content;
+
+      &:hover {
+        cursor: pointer;
+        color: $graf-color-5;
+      }
+    }
+
+    @include onMobile {
+      gap: 1.5rem;
+    }
+  }
+}

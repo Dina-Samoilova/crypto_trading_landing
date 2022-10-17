@@ -1,0 +1,116 @@
+@import '../../styles/utils';
+
+.crypto__about {
+  margin-top: 9rem;
+  padding: 0 8rem;
+
+  &-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_subtitle {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $color-subtext;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0.02em;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: $color-text;
+      text-align: center;
+    }
+  }
+
+  &-content {
+    display: flex;
+    padding-top: 4rem;
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 2.6rem;
+      max-width: 370px;
+      margin-left: 180px;
+
+      &-title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 43px;
+        color: $color-text;
+      }
+
+      &-text {
+        display: flex;
+        padding-top: 2rem;
+
+        & p {
+          font-size: 18px;
+          line-height: 21px;
+          color: $color-text-second;
+          margin-left: 1rem;
+        }
+      }
+
+      & button {
+        margin-top: 2.75rem;
+        padding: 1.3rem 3.6rem;
+        background: $gradient-btn;
+        box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $color-text;
+        max-width: max-content;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      @include onDesktop {
+        margin-left: 0;
+      }
+
+      @include onMobile {
+        max-width: max-content;
+      }
+    }
+
+    @include onLarge {
+      justify-content: space-around;
+    }
+
+    @include onDesktop {
+      justify-content: space-between;
+    }
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  @include onLarge {
+    padding: 0 16rem;
+  }
+
+  @include onDesktop {
+    padding: 0 3rem;
+  }
+
+  @include onMobile {
+    padding: 0 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

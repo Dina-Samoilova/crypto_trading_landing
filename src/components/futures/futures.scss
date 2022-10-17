@@ -1,0 +1,344 @@
+@import '../../styles/utils';
+
+.crypto__futures {
+  display: flex;
+  justify-content: space-between;
+
+  &-block1 {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 216px;
+    height: 292px;
+    padding: 2.5rem 1.6rem;
+    margin-top: 5.75rem;
+    position: relative;
+
+    background: transparent;
+    border: 0.9px solid rgba($color: #fff, $alpha: 0.4);
+    border-radius: 1.5rem;
+
+    &_two {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    &_one {
+      margin-top: 1.6rem;
+
+      @include onMobile {
+        margin-top: 0;
+        margin-bottom: 1.6rem;
+        align-self: center;
+      }
+    }
+
+    &-line1 {
+      position: absolute;
+      top: 4rem;
+      left: 11.7rem;
+      width: 30px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        top: 10.5rem;
+        left: 5rem;
+        transform: rotate(270deg);
+        width: 18px;
+      }
+    }
+
+    &-line2 {
+      position: absolute;
+      top: 9rem;
+      left: 11.7rem;
+      width: 44px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        // top: 8.7rem;
+        left: 5.8rem;
+        transform: rotate(270deg);
+        width: 142px;
+      }
+    }
+
+    &-line3 {
+      position: absolute;
+      top: 13.7rem;
+      left: 11.7rem;
+      width: 30px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        top: 10.5rem;
+        left: 14.5rem;
+        transform: rotate(270deg);
+        width: 18px;
+      }
+    }
+
+    @include onMobile {
+      flex-direction: column-reverse;
+      width: 320px;
+      height: 180px;
+      padding: 1.25rem;
+      margin-top: 3rem;
+
+      & .crypto__brick:last-child {
+        align-self: center;
+      }
+
+      &_two {
+        flex-direction: row;
+      }
+    }
+  }
+
+
+  &-block2 {
+    margin-top: 10.3rem;
+    margin-left: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    align-content: space-between;
+    position: relative;
+
+    &-line1 {
+      position: absolute;
+      top: 1.8rem;
+      left: -1.3rem;
+      width: 20px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        transform: rotate(90deg);
+        top: -0.7rem;
+        left: 5rem;
+      }
+    }
+
+    &-line2 {
+      position: absolute;
+      top: 4.4rem;
+      left: -3.9rem;
+      width: 85px;
+      height: 1px;
+      transform: rotate(90deg);
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        transform: rotate(0deg);
+        top: -1.3rem;
+        left: 5.65rem;
+        width: 152px;
+      }
+    }
+
+    &-line3 {
+      position: absolute;
+      top: 7rem;
+      left: -1.3rem;
+      width: 20px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        transform: rotate(90deg);
+        top: -0.7rem;
+        left: 14.5rem;
+      }
+    }
+
+    @include onMobile {
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 3.6rem;
+      width: 320px;
+    }
+  }
+
+  &-block3 {
+    position: relative;
+    margin-left: 2rem;
+    position: relative;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 379px;
+      width: 265px;
+      padding-top: 0.7rem;
+
+      background: transparent;
+      border: 0.9px solid rgba($color: #fff, $alpha: 0.4);
+      border-radius: 1.5rem;
+
+      &_content {
+        padding-left: 1.875rem;
+        padding-right: 1.875rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & p {
+          text-align: center;
+        }
+      }
+
+      &_two {
+        margin-top: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+
+        @include onMobile {
+          width: 90%;
+          flex-direction: row;
+        }
+      }
+
+      @include onMobile {
+        width: 320px;
+        height: 276px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding: 0;
+      }
+    }
+
+    &_outside {
+      position: relative;
+
+      &-arrow_down {
+        position: absolute;
+
+        & div:first-child {
+          position: absolute;
+          top: -5rem;
+          left: 5rem;
+          width: 82.93px;
+          height: 1.8px;
+          transform: rotate(-90deg);
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.14));
+
+          @include onMobile {
+            top: -4rem;
+            left: 6.5rem;
+          }
+        }
+
+        & div:last-child {
+          position: absolute;
+          top: -2.56rem;
+          left: 7.27rem;
+          width: 0.45rem;
+          height: 0.45rem;
+          padding: 4px;
+          border: solid #b1b2ba;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+
+          @include onMobile {
+            top: -1.6rem;
+            left: 8.8rem;
+          }
+        }
+      }
+
+      &-arrow_up {
+        position: absolute;
+
+        & div:first-child {
+          position: absolute;
+          top: -7.9rem;
+          left: 9.28rem;
+          width: 0.45rem;
+          height: 0.45rem;
+          padding: 4px;
+          border: solid #b1b2ba;
+          border-width: 0 2px 2px 0;
+          transform: rotate(225deg);
+
+          @include onMobile {
+            top: -6.9rem;
+            left: 10.5rem;
+          }
+        }
+
+        & div:last-child {
+          position: absolute;
+          top: -5rem;
+          left: 7rem;
+          width: 82.93px;
+          height: 1.8px;
+          transform: rotate(-90deg);
+          background: linear-gradient(270deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.14));
+
+          @include onMobile {
+            top: -4rem;
+            left: 8.2rem;
+          }
+        }
+      }
+
+      &-text {
+        text-align: center;
+        margin-top: 3.125rem;
+        & p {
+          font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+      }
+    }
+
+    &-line1 {
+      position: absolute;
+      top: 12rem;
+      left: -2rem;
+      width: 83px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        top: -0.4rem;
+        left: 3.8rem;
+        transform: rotate(270deg);
+        width: 63px;
+      }
+    }
+
+    &-line2 {
+      position: absolute;
+      top: 17rem;
+      left: -2rem;
+      width: 83px;
+      height: 0.9px;
+      background: linear-gradient(90deg, rgba(183, 182, 187, 1), rgba(94, 89, 113, 1));
+
+      @include onMobile {
+        top: -0.4rem;
+        left: 13.1rem;
+        transform: rotate(270deg);
+        width: 63px;
+      }
+    }
+
+    @include onMobile {
+      margin-left: 0;
+      margin-top: 2.25rem;
+    }
+  }
+
+
+  @include onMobile {
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
+}

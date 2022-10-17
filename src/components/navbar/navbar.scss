@@ -1,0 +1,145 @@
+@import '../../styles/utils';
+
+.crypto__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8rem;
+
+  &-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_logo {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: row;
+
+      @include onMobile {
+        display: none;
+      }
+    }
+  }
+
+  &-career {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 2.8rem;
+
+    @include onMobile {
+      display: none;
+    }
+
+    @include onDesktop {
+      margin-left: 1.5rem;
+    }
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 2.5rem;
+    }
+  }
+
+  & button {
+    display: flex;
+    padding: 1rem 2.2rem;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 10px;
+    background: linear-gradient(140.6deg, #ffffff -27.18%, #dedede 126.06%);
+    box-shadow: 0px 0px 49px rgba(42, 7, 254, 0.4);
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: inset 0px 0px 49px rgba(42, 7, 254, 0.4);
+    }
+  }
+
+  &-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+
+    &_sandwich {
+      width: 32px;
+      height: 8px;
+      border-top: 1px solid $color-text;
+      border-bottom: 1px solid $color-text;
+      cursor: pointer;
+    }
+
+    &_container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+
+      text-align: end;
+      background: $gradient-bg;
+      padding: 2rem;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      margin-top: 1rem;
+      min-width: 210px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);
+
+      & p {
+        margin: 1rem 0;
+      }
+
+      @include onMobile {
+        top: 20px;
+
+        &-career {
+          display: block;
+
+          & button {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+
+    @include onMobile {
+      display: flex;
+    }
+  }
+
+  @include onLarge {
+    padding: 2rem 16rem;
+  }
+
+  @include onDesktop {
+    padding: 2rem 3rem;
+  }
+
+  @include onMobile {
+    padding: 2rem 1.75rem;
+  }
+}
+
+.arrow {
+  height: 24px;
+  width: 24px;
+  margin-left: 0.5rem;
+}
+
+

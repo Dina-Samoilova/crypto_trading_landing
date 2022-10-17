@@ -1,0 +1,229 @@
+@import '../../styles/utils';
+
+.crypto__graf {
+  position: relative;
+  background: transparent;
+
+  &-lines {
+    display: flex;
+    height: 30rem;
+    border-left-width: 3px;
+    border-style: solid;
+    border-image-source: linear-gradient(0deg, rgba(11, 11, 15, 0.4) -90%, rgba(33, 99, 255, 0.4) 100%, rgba(11, 10, 19, 0.4) 100%);
+    border-image-slice: 0 0 0 50;
+
+    & div {
+      width: 7.5rem;
+      overflow: hidden;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        border-left: 10px dashed #000;
+        background: linear-gradient(#000,#000) padding-box, linear-gradient(0deg, rgba(11, 11, 15, 0.4) 0%, rgba(33, 99, 255, 0.4) 49%, rgba(11, 10, 19, 0.4) 100%) border-box;
+        top: -8px;
+        bottom: -8px;
+        left: -8px;
+        right: -8px;
+      }
+
+      @include onMobile {
+        width: 5rem;
+      }
+    }
+
+    & div:first-child {
+      margin-left: 7.5rem;
+
+      @include onMobile {
+        margin-left: 5rem;
+      }
+    }
+
+    @include onMobile {
+      height: 20.75rem;
+    }
+  }
+
+  &-container {
+    &_numbers {
+      display: flex;
+      justify-content: flex-start;
+
+      & div {
+        width: 7.5rem;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        font-size: 14px;
+        line-height: 17px;
+        color: #d4d4d4;
+
+        @include onMobile {
+          width: 5rem;
+        }
+      }
+    }
+  }
+
+  &-x-line {
+    height: 13.6rem;
+    width: 30rem;
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    border-bottom-width: 3px;
+    border-style: solid;
+    border-image-source: linear-gradient(90deg, rgba(11, 11, 15, 0.4) -90%, rgba(33, 99, 255, 0.4) 100%, rgba(11, 10, 19, 0.4) 100%);
+    border-image-slice: 0 0 50 0;
+
+    @include onMobile {
+      height: 10rem;
+      width: 20.6rem;
+    }
+  }
+
+  &-blue-lines {
+    height: 13.6rem;
+    width: 30rem;
+    position: absolute;
+    top: 0;
+
+    &_1 {
+      width: 19px;
+      height: 107px;
+      position: absolute;
+      top: 0;
+      left: 4rem;
+
+      background: $graf-color-1;
+      box-shadow: 0px -2px 23px rgba(42, 7, 254, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 71.91px;
+        left: 3rem;
+      }
+    }
+
+    &_2 {
+      width: 19px;
+      height: 245px;
+      position: absolute;
+      top: -0.3rem;
+      left: 8rem;
+
+      background: $graf-color-2;
+      box-shadow: 0px -2px 23px rgba(42, 7, 254, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 164.65px;
+        top: 0;
+        left: 6rem;
+      }
+    }
+
+    &_3 {
+      width: 19px;
+      height: 430px;
+      position: absolute;
+      top: -2rem;
+      left: 14rem;
+
+      background: $graf-color-3;
+      box-shadow: 0px -2px 23px rgba(42, 7, 254, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 288.97px;
+        top: -1rem;
+        left: 10rem;
+      }
+    }
+
+    @include onMobile {
+      height: 10rem;
+      width: 20.6rem;
+    }
+  }
+
+  &-green-lines {
+    height: 13.6rem;
+    width: 30rem;
+    position: absolute;
+    top: 14rem;
+
+    &_4 {
+      width: 19px;
+      height: 430px;
+      position: absolute;
+      top: -12rem;
+      left: 14rem;
+
+      background: $graf-color-4;
+      box-shadow: 0px -2px 23px rgba(7, 254, 224, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 288.97px;
+        top: -7rem;
+        left: 10rem;
+      }
+    }
+
+    &_5 {
+      width: 19px;
+      height: 245px;
+      position: absolute;
+      top: -2rem;
+      left: 8.3rem;
+
+      background: $graf-color-5;
+      box-shadow: 0px -2px 23px rgba(7, 254, 224, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 164.65px;
+        top: 0;
+        left: 6rem;
+      }
+    }
+
+    &_6 {
+      width: 19px;
+      height: 107px;
+      position: absolute;
+      top: 6.5rem;
+      left: 4rem;
+
+      background: $graf-color-6;
+      box-shadow: 0px -2px 23px rgba(7, 254, 224, 0.8);
+      border-radius: 15px;
+      transform: rotate(90deg);
+
+      @include onMobile {
+        width: 12.77px;
+        height: 71.91px;
+        top: 6rem;
+        left: 3rem;
+      }
+    }
+
+    @include onMobile {
+      height: 10rem;
+      width: 20.6rem;
+      top: 10rem;
+    }
+  }
+}

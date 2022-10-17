@@ -1,0 +1,55 @@
+@import '../../styles/utils';
+
+.crypto__blog {
+  display: flex;
+  gap: 1.875rem;
+  margin-top: 11.4rem;
+  padding: 0 7rem 10rem;
+
+  &-blog1 {
+    background-image: url('../../assets/Pattern_Code.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    border-radius: 1.5rem;
+
+    @include onMobile {
+      background-position: bottom;
+
+      & .crypto__block-content {
+        padding-bottom: 15rem;
+      }
+    }
+  }
+
+  &-blog2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    &_two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.875rem;
+
+      @include onMobile {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @include onLarge {
+    padding: 0 16rem 10rem;
+  }
+
+  @include onDesktop {
+    padding: 0 3rem 5rem;
+  }
+
+  @include onMobile {
+    padding: 0 1.75rem 3.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

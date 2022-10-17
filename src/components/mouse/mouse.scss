@@ -1,0 +1,30 @@
+@import '../../styles/utils';
+
+.crypto__mouse {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.75rem;
+
+  &-borders {
+    width: 17px;
+    height: 29px;
+    border: 2px solid $color-text-second;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  &-scroll {
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    left: 5.5px;
+    top: 6px;
+
+    border-left: 2px solid $color-text-second;
+    border-radius: 15px;
+  }
+
+  @include onMobile {
+    display: none;
+  }
+}
